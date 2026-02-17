@@ -1,0 +1,47 @@
+.about {
+  padding: 80px 5%;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skill-card {
+  background: #f0f0f0;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #333;
+  transition: 0.3s;
+  border: 1px solid #ddd;
+}
+
+.skill-card:hover {
+  background-color: #61dafb;
+  color: white;
+  transform: translateY(-5px);
+}
