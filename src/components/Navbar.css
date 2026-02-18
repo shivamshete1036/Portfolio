@@ -1,23 +1,68 @@
+/* Base Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
-  background-color: #333;
-  color: white;
+  padding: 1.5rem 5%;
+  position: fixed; /* Keeps the navbar at the top while scrolling */
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: all 0.4s ease-in-out;
+  background: transparent; /* Initial state is clear */
 }
 
+/* Scrolled State (Glassmorphism Effect) */
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blurs the content behind the navbar */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 0.8rem 5%; /* Slightly shrinks the height for a sleek look */
+}
+
+/* Logo Styling */
+.navbar-logo h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #333; /* Default dark color */
+  transition: color 0.4s;
+}
+
+/* Navigation Links */
 .navbar-links {
   display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-links li {
-  margin-left: 20px;
+  margin-left: 30px;
 }
 
 .navbar-links a {
-  color: white;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  color: #ffffff; /* Initial color (assuming Hero section is dark) */
+  transition: color 0.4s ease;
+}
+
+/* Change link colors when scrolled */
+.navbar.scrolled a, 
+.navbar.scrolled .navbar-logo h2 {
+  color: #333;
+}
+
+/* Hover Effect */
+.navbar-links a:hover {
+  color: #61dafb; /* React Blue */
+}
+
+/* Responsive Fix: Ensure links don't overlap on small screens */
+@media (max-width: 768px) {
+  .navbar-links li {
+    margin-left: 15px;
+    font-size: 0.9rem;
+  }
 }
