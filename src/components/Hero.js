@@ -6,8 +6,20 @@ const Hero = () => {
     <section className="hero" id="home">
       <div className="hero-content">
         <h1>Hi, I'm <span className="highlight">Shivam Shete</span></h1>
-        <p>I build modern, responsive web applications.</p>
-        <button className="hero-btn"> My Work</button>
+        <p>I build modern, responsive web applications using React and Java.</p>
+        
+        <div className="hero-btns">
+          <a href="#projects" className="hero-btn">View My Work</a>
+          
+          {/* Download Button */}
+          <a 
+            href="/Shivam_Shete_CSE_2026_Resume.pdf" 
+            download="Shivam_Shete_Resume.pdf" 
+            className="hero-btn outline"
+          >
+            Download Resume
+          </a>
+        </div>
       </div>
     </section>
   );
