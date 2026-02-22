@@ -1,11 +1,11 @@
-/* Container Background */
+
 .about {
-  background: #111111; /* Solid charcoal for a professional look */
+  background: #111111; 
   border-top: 1px solid var(--border);
   padding: 120px 0;
 }
 
-/* Structural Grid */
+
 .about-grid {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
@@ -14,7 +14,6 @@
   margin-bottom: 60px;
 }
 
-/* Bio Content */
 .bio-para {
   font-size: 1.05rem;
   line-height: 1.9;
@@ -22,13 +21,13 @@
   margin-bottom: 25px;
 }
 
-/* Keyword Highlighting */
+
 .text-highlight {
-  color: var(--accent); /* Emerald Mint */
+  color: var(--accent); 
   font-weight: 600;
 }
 
-/* Sidebar Styling */
+
 .education-sidebar {
   display: flex;
   flex-direction: column;
@@ -39,7 +38,7 @@
   padding: 20px;
   background: var(--bg-card);
   border: 1px solid var(--border);
-  border-radius: 4px; /* Sharp corners are more aesthetic/professional */
+  border-radius: 4px; 
 }
 
 .edu-label {
@@ -57,7 +56,7 @@
   color: var(--text-main);
 }
 
-/* Skills Section */
+
 .skills-subheading {
   text-align: center;
   font-size: 0.85rem;
@@ -93,7 +92,7 @@
   background: var(--accent-soft);
 }
 
-/* Mobile Responsiveness */
+
 @media (max-width: 992px) {
   .about-grid {
     grid-template-columns: 1fr;

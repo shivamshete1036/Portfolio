@@ -6,12 +6,12 @@ const Hero = () => {
   return (
     <section className="hero" id="home">
       <div className="container hero-container">
-        {/* Professional Minimalist Image Wrapper */}
+       
         <div className="hero-image-wrapper">
           <img src={profileImg} alt="Shivam B. Shete" className="profile-photo" />
         </div>
 
-        {/* Structured Text Content */}
+        
         <div className="hero-content">
           <span className="hero-label">Software Developer</span>
           <h1>

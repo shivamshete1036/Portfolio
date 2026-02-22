@@ -15,7 +15,7 @@ const About = () => {
         <h2 className="section-title">Professional Profile</h2>
         
         <div className="about-grid">
-          {/* Detailed Bio Section */}
+         
           <div className="bio-container">
             <p className="bio-para">
               I am an <span className="text-highlight">Aspiring Software Developer</span> with a specialized focus on building 
@@ -30,7 +30,7 @@ const About = () => {
             </p>
           </div>
 
-          {/* Educational Timeline / Quick Facts */}
+          
           <div className="education-sidebar">
              <div className="edu-item">
                 <span className="edu-label">Expected Graduation</span>

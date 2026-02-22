@@ -1,6 +1,4 @@
-/* =========================================
-   NAVBAR - ARCHITECTURAL MINIMALISM
-   ========================================= */
+
 
 .navbar {
   display: flex;
@@ -16,16 +14,16 @@
   background: transparent;
 }
 
-/* Scrolled State: Dark Glassmorphism */
+
 .navbar.scrolled {
-  background: rgba(13, 13, 13, 0.8); /* Matte Charcoal with transparency */
+  background: rgba(13, 13, 13, 0.8); 
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   padding: 1rem 5%;
   border-bottom: 1px solid var(--border);
 }
 
-/* Logo Styling */
+
 .navbar-logo h2 {
   margin: 0;
   font-size: 1.1rem;
@@ -35,7 +33,7 @@
   transition: var(--transition);
 }
 
-/* Navigation Links */
+
 .navbar-links {
   display: flex;
   list-style: none;
@@ -57,9 +55,9 @@
   transition: var(--transition);
 }
 
-/* Hover & Active States */
+
 .navbar-links a:hover {
-  color: var(--accent); /* Emerald Mint */
+  color: var(--accent); 
 }
 
 .navbar.scrolled .navbar-links a {
@@ -70,7 +68,7 @@
   color: var(--accent);
 }
 
-/* Mobile Responsive Adjustments */
+
 @media (max-width: 768px) {
   .navbar {
     padding: 1.5rem 5%;

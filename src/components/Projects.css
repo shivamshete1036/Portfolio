@@ -1,10 +1,8 @@
-/* =========================================
-   PROJECTS SECTION - ARCHITECTURAL DARK
-   ========================================= */
+
 
 .projects {
   padding: 120px 5%;
-  background: var(--bg-body); /* Matte Charcoal */
+  background: var(--bg-body); 
   position: relative;
   border-top: 1px solid var(--border);
 }
@@ -17,11 +15,11 @@
   margin: 0 auto;
 }
 
-/* Structural Card Design */
+
 .project-card {
-  background: var(--bg-card); /* Elevated Surface */
+  background: var(--bg-card); 
   border: 1px solid var(--border);
-  border-radius: 4px; /* Professional sharp look */
+  border-radius: 4px; 
   padding: 40px;
   transition: var(--transition);
   display: flex;
@@ -32,7 +30,7 @@
 
 .project-card:hover {
   transform: translateY(-8px);
-  border-color: var(--accent); /* Emerald Mint highlight */
+  border-color: var(--accent); 
 }
 
 .project-title {
@@ -48,10 +46,10 @@
   line-height: 1.8;
   margin-bottom: 30px;
   font-size: 0.95rem;
-  flex-grow: 1; /* Ensures buttons align at the bottom */
+  flex-grow: 1; 
 }
 
-/* Minimalist Tech Stack Tags */
+
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
@@ -69,7 +67,7 @@
   padding-bottom: 2px;
 }
 
-/* Button Container */
+
 .card-footer {
   display: flex;
   gap: 15px;
@@ -82,7 +80,7 @@
   font-weight: 700;
   font-size: 0.75rem;
   padding: 12px;
-  border-radius: 0px; /* Matching sharp aesthetic */
+  border-radius: 0px; 
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -94,7 +92,7 @@
 
 .live-btn {
   background: var(--accent);
-  color: #000; /* High contrast black on mint */
+  color: #000; 
 }
 
 .view-btn:hover {
@@ -108,7 +106,7 @@
   color: var(--accent);
 }
 
-/* Mobile Responsiveness */
+
 @media (max-width: 768px) {
   .projects {
     padding: 80px 5%;

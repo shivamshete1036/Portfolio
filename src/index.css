@@ -1,31 +1,26 @@
-/* =========================================
-   SOPHISTICATED MINIMALIST THEME
-   Palette: Charcoal & Emerald Mint
-   ========================================= */
+
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap');
 
 :root {
-  /* Core Colors */
-  --bg-body: #0d0d0d;       /* Matte Charcoal */
-  --bg-card: #161616;       /* Elevated Surface */
-  --accent: #00ff88;        /* Emerald Mint */
+  
+  --bg-body: #0d0d0d;       
+  --bg-card: #161616;       
+  --accent: #00ff88;        
   --accent-soft: rgba(0, 255, 136, 0.1);
   --accent-glow: rgba(0, 255, 136, 0.3);
   
-  /* Text Colors */
-  --text-main: #f8fafc;     /* Off-White */
-  --text-dim: #94a3b8;      /* Slate Grey */
   
-  /* Structural Variables */
+  --text-main: #f8fafc;     
+  --text-dim: #94a3b8;      
+  
+  
   --border: rgba(255, 255, 255, 0.05);
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --container-max: 1100px;
 }
 
-/* =========================================
-   Global Reset & Accessibility
-   ========================================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -46,14 +41,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Ensure images don't break layouts */
+
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* Keyboard Navigation */
+
 a:focus-visible, 
 button:focus-visible, 
 input:focus-visible {
@@ -61,9 +56,7 @@ input:focus-visible {
   outline-offset: 4px;
 }
 
-/* =========================================
-   Typography & Headers
-   ========================================= */
+
 h1, h2, h3, h4 {
   font-family: 'Poppins', sans-serif;
   font-weight: 800;
@@ -82,7 +75,7 @@ h1, h2, h3, h4 {
   position: relative;
 }
 
-/* Subtle architectural underline */
+
 .section-title::after {
   content: '';
   display: block;
@@ -92,9 +85,7 @@ h1, h2, h3, h4 {
   margin: 15px auto 0;
 }
 
-/* =========================================
-   Layout Containers
-   ========================================= */
+
 section {
   padding: 120px 5%;
   min-height: auto;
@@ -109,12 +100,10 @@ section {
   margin: 0 auto;
 }
 
-/* =========================================
-   Architectural Buttons
-   ========================================= */
+
 .hero-btn, .submit-btn, .view-btn {
   padding: 14px 35px;
-  border-radius: 0px; /* Sharp edges for professional look */
+  border-radius: 0px; 
   font-family: 'Inter', sans-serif;
   font-weight: 700;
   font-size: 0.75rem;
@@ -129,7 +118,7 @@ section {
   border: 1px solid var(--accent);
 }
 
-/* Primary Button */
+
 .hero-btn {
   background-color: var(--accent);
   color: #000;
@@ -142,7 +131,7 @@ section {
   box-shadow: 0 10px 20px var(--accent-glow);
 }
 
-/* Outline/Secondary Button */
+
 .hero-btn.outline {
   background: transparent;
   color: var(--accent);
@@ -153,9 +142,7 @@ section {
   color: #000;
 }
 
-/* =========================================
-   Aesthetic Scrollbar
-   ========================================= */
+
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -173,18 +160,14 @@ section {
   background: var(--accent);
 }
 
-/* =========================================
-   Responsive Scaling
-   ========================================= */
 
-/* Desktop & Laptops */
 @media screen and (max-width: 1200px) {
   .container {
     max-width: 900px;
   }
 }
 
-/* Tablets */
+
 @media screen and (max-width: 1024px) {
   section {
     padding: 100px 5%;
@@ -195,7 +178,7 @@ section {
   }
 }
 
-/* Mobile Devices */
+
 @media screen and (max-width: 768px) {
   section {
     padding: 80px 5%;
@@ -209,7 +192,7 @@ section {
 
   .hero-btn, .submit-btn, .view-btn {
     padding: 12px 28px;
-    width: 100%; /* Full width buttons for mobile touch accuracy */
+    width: 100%;
   }
 
   .hero-btns {
@@ -219,7 +202,7 @@ section {
   }
 }
 
-/* Portrait Small Mobile */
+
 @media screen and (max-width: 480px) {
   section {
     padding: 60px 5%;

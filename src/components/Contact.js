@@ -19,12 +19,11 @@ const Contact = () => {
     e.preventDefault();
     setIsSending(true);
 
-    // Your specific EmailJS Credentials
     const serviceID = 'service_id9jzpd';
     const templateID = 'template_ki7fh8l';
     const publicKey = 'LOTjJgY-JCWnci1g7';
 
-    // This object matches the {{name}}, {{email}}, and {{message}} in your template
+    
     const templateParams = {
       name: formData.name,
       email: formData.email,
@@ -50,7 +49,7 @@ const Contact = () => {
         <h2 className="section-title">Contact</h2>
         
         <div className="contact-grid">
-          {/* Professional Contact Information from Resume */}
+         
           <div className="contact-info">
             <div className="info-block">
               <span className="info-label">Email</span>
@@ -66,7 +65,7 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Minimalist Contact Form */}
+         
           <div className="form-container">
             <form className="contact-form" ref={form} onSubmit={handleSubmit}>
               <div className="form-group">

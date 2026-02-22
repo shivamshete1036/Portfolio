@@ -12,7 +12,7 @@ function App() {
       <About />
       <Projects />
       <Contact/>
-      {/* Contact section will go here next */}
+      
     </div>
   );
 }
