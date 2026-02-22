@@ -1,32 +1,38 @@
-/* Base Navbar Styles */
+/* =========================================
+   NAVBAR - ARCHITECTURAL MINIMALISM
+   ========================================= */
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 5%;
-  position: fixed; /* Keeps the navbar at the top while scrolling */
+  padding: 2rem 5%;
+  position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
-  transition: all 0.4s ease-in-out;
-  background: transparent; /* Initial state is clear */
+  transition: var(--transition);
+  background: transparent;
 }
 
-/* Scrolled State (Glassmorphism Effect) */
+/* Scrolled State: Dark Glassmorphism */
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-  backdrop-filter: blur(10px); /* Blurs the content behind the navbar */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 0.8rem 5%; /* Slightly shrinks the height for a sleek look */
+  background: rgba(13, 13, 13, 0.8); /* Matte Charcoal with transparency */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 1rem 5%;
+  border-bottom: 1px solid var(--border);
 }
 
 /* Logo Styling */
 .navbar-logo h2 {
   margin: 0;
-  font-size: 1.5rem;
-  color: #333; /* Default dark color */
-  transition: color 0.4s;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--text-main);
+  transition: var(--transition);
 }
 
 /* Navigation Links */
@@ -38,31 +44,48 @@
 }
 
 .navbar-links li {
-  margin-left: 30px;
+  margin-left: 40px;
 }
 
 .navbar-links a {
   text-decoration: none;
-  font-weight: 600;
-  color: #ffffff; /* Initial color (assuming Hero section is dark) */
-  transition: color 0.4s ease;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  transition: var(--transition);
 }
 
-/* Change link colors when scrolled */
-.navbar.scrolled a, 
-.navbar.scrolled .navbar-logo h2 {
-  color: #333;
-}
-
-/* Hover Effect */
+/* Hover & Active States */
 .navbar-links a:hover {
-  color: #61dafb; /* React Blue */
+  color: var(--accent); /* Emerald Mint */
 }
 
-/* Responsive Fix: Ensure links don't overlap on small screens */
+.navbar.scrolled .navbar-links a {
+  color: var(--text-main);
+}
+
+.navbar.scrolled .navbar-links a:hover {
+  color: var(--accent);
+}
+
+/* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
-  .navbar-links li {
-    margin-left: 15px;
+  .navbar {
+    padding: 1.5rem 5%;
+  }
+
+  .navbar-logo h2 {
     font-size: 0.9rem;
+  }
+
+  .navbar-links li {
+    margin-left: 20px;
+  }
+
+  .navbar-links a {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
   }
 }

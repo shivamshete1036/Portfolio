@@ -1,47 +1,117 @@
+/* Container Background */
 .about {
-  padding: 80px 5%;
-  background-color: #fff;
+  background: #111111; /* Solid charcoal for a professional look */
+  border-top: 1px solid var(--border);
+  padding: 120px 0;
+}
+
+/* Structural Grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+/* Bio Content */
+.bio-para {
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: var(--text-dim);
+  margin-bottom: 25px;
+}
+
+/* Keyword Highlighting */
+.text-highlight {
+  color: var(--accent); /* Emerald Mint */
+  font-weight: 600;
+}
+
+/* Sidebar Styling */
+.education-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edu-item {
+  padding: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 4px; /* Sharp corners are more aesthetic/professional */
+}
+
+.edu-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+
+.edu-value {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* Skills Section */
+.skills-subheading {
   text-align: center;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: var(--text-main);
+  margin-bottom: 40px;
 }
 
-.about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.about-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.about-content p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #444;
-  margin-bottom: 30px;
-}
-
-.skills-grid {
+.skills-flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 12px;
 }
 
-.skill-card {
-  background: #f0f0f0;
-  padding: 10px 20px;
-  border-radius: 50px;
+.skill-chip {
+  background: transparent;
+  color: var(--text-main);
+  padding: 10px 22px;
+  font-size: 0.8rem;
   font-weight: 600;
-  color: #333;
-  transition: 0.3s;
-  border: 1px solid #ddd;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  cursor: default;
 }
 
-.skill-card:hover {
-  background-color: #61dafb;
-  color: white;
-  transform: translateY(-5px);
+.skill-chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .education-sidebar {
+    flex-direction: row;
+    gap: 15px;
+  }
+  
+  .edu-item {
+    flex: 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .education-sidebar {
+    flex-direction: column;
+  }
 }

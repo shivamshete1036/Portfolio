@@ -1,29 +1,35 @@
 import React from 'react';
 import './Hero.css';
-import profileImg from '../assets/profile.jpg'; // Import your photo
+import profileImg from '../assets/profile.jpg';
 
 const Hero = () => {
   return (
     <section className="hero" id="home">
-      <div className="hero-container">
-        {/* Profile Photo Side */}
-        <div className="hero-image">
-          <img src={profileImg} alt="Shivam Shete" className="profile-photo" />
+      <div className="container hero-container">
+        {/* Professional Minimalist Image Wrapper */}
+        <div className="hero-image-wrapper">
+          <img src={profileImg} alt="Shivam B. Shete" className="profile-photo" />
         </div>
 
-        {/* Text Content Side */}
+        {/* Structured Text Content */}
         <div className="hero-content">
-          <h1>Hi, I'm <span className="highlight">Shivam Shete</span></h1>
-          <p>I build modern, responsive web applications using React and Java.</p>
+          <span className="hero-label">Software Developer</span>
+          <h1>
+            Hi, I'm <span className="text-highlight">Shivam B. Shete</span>
+          </h1>
+          <p className="hero-description">
+            Aspiring Software Developer with strong skills in Java, Python, and JavaScript, 
+            focused on building responsive web applications and full-stack solutions.
+          </p>
           
           <div className="hero-btns">
-            <a href="#projects" className="hero-btn">View My Work</a>
+            <a href="#projects" className="hero-btn">View Work</a>
             <a 
-              href="/Shivam_Shete_Resume.pdf" 
+              href="/Shivam_Shete_CSE_2026_Resume.pdf" 
               download 
               className="hero-btn outline"
             >
-              Download CV
+              Get Resume
             </a>
           </div>
         </div>

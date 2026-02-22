@@ -1,21 +1,30 @@
-/* Import Google Fonts for a premium look */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Poppins:wght@400;600;700&display=swap');
+/* =========================================
+   SOPHISTICATED MINIMALIST THEME
+   Palette: Charcoal & Emerald Mint
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap');
 
 :root {
-  /* Elegant Dark Color Palette */
-  --bg-deep: #0f172a;        /* Midnight Blue */
-  --bg-surface: #1e293b;    /* Slate Surface */
-  --accent: #00d1ff;        /* Electric Cyan */
-  --accent-glow: rgba(0, 209, 255, 0.3);
-  --text-primary: #f8fafc;  /* Crisp White */
-  --text-secondary: #94a3b8; /* Muted Slate */
+  /* Core Colors */
+  --bg-body: #0d0d0d;       /* Matte Charcoal */
+  --bg-card: #161616;       /* Elevated Surface */
+  --accent: #00ff88;        /* Emerald Mint */
+  --accent-soft: rgba(0, 255, 136, 0.1);
+  --accent-glow: rgba(0, 255, 136, 0.3);
   
-  /* Smooth Transitions */
-  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Text Colors */
+  --text-main: #f8fafc;     /* Off-White */
+  --text-dim: #94a3b8;      /* Slate Grey */
+  
+  /* Structural Variables */
+  --border: rgba(255, 255, 255, 0.05);
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --container-max: 1100px;
 }
 
 /* =========================================
-   Global Reset & Base Styles
+   Global Reset & Accessibility
    ========================================= */
 * {
   margin: 0;
@@ -24,141 +33,140 @@
 }
 
 html {
-  scroll-behavior: smooth; /* Smooth sliding between sections */
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Inter', -apple-system, sans-serif;
-  background-color: var(--bg-deep);
-  color: var(--text-primary);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-body);
+  color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
-  -webkit-font-smoothing: antialiased; /* Makes text look sharper on dark backgrounds */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Ensure all images are responsive by default */
+/* Ensure images don't break layouts */
 img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
+/* Keyboard Navigation */
+a:focus-visible, 
+button:focus-visible, 
+input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
 /* =========================================
-   Typography
+   Typography & Headers
    ========================================= */
 h1, h2, h3, h4 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
 }
 
-p {
-  color: var(--text-secondary);
-  margin-bottom: 1.5rem;
+.section-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  color: var(--text-main);
+  margin-bottom: 5rem;
+  position: relative;
+}
+
+/* Subtle architectural underline */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  margin: 15px auto 0;
 }
 
 /* =========================================
-   Layout & Containers
+   Layout Containers
    ========================================= */
 section {
-  padding: 100px 5%;
-  min-height: 80vh;
+  padding: 120px 5%;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-/* Shared Container for Alignment */
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: var(--container-max);
   margin: 0 auto;
 }
 
-/* Reusable Section Titles */
-.section-title {
-  text-align: center;
-  font-size: 2.8rem;
-  margin-bottom: 3.5rem;
-  position: relative;
-}
-
-.section-title::after {
-  content: '';
-  display: block;
-  width: 60px;
-  height: 4px;
-  background: var(--accent);
-  margin: 12px auto 0;
-  border-radius: 2px;
-  box-shadow: 0 0 10px var(--accent-glow); /* Added subtle glow to the underline */
-}
-
 /* =========================================
-   UI Elements & Buttons
+   Architectural Buttons
    ========================================= */
 .hero-btn, .submit-btn, .view-btn {
-  padding: 14px 32px;
-  border-radius: 8px;
+  padding: 14px 35px;
+  border-radius: 0px; /* Sharp edges for professional look */
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   cursor: pointer;
   transition: var(--transition);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  border: 1px solid var(--accent);
 }
 
+/* Primary Button */
 .hero-btn {
   background-color: var(--accent);
-  color: var(--bg-deep);
-  border: 2px solid var(--accent);
-  box-shadow: 0 4px 14px 0 var(--accent-glow);
+  color: #000;
 }
 
 .hero-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 25px 0 var(--accent-glow);
-  filter: brightness(1.1);
+  transform: translateY(-3px);
+  background-color: transparent;
+  color: var(--accent);
+  box-shadow: 0 10px 20px var(--accent-glow);
 }
 
+/* Outline/Secondary Button */
 .hero-btn.outline {
   background: transparent;
-  border: 2px solid var(--accent);
   color: var(--accent);
-  box-shadow: none;
 }
 
 .hero-btn.outline:hover {
   background: var(--accent);
-  color: var(--bg-deep);
-  box-shadow: 0 4px 14px 0 var(--accent-glow);
-}
-
-/* Accessibility: Keyboard Focus States */
-a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
-  outline: 2px dashed var(--accent);
-  outline-offset: 4px;
+  color: #000;
 }
 
 /* =========================================
-   Scrollbar Styling
+   Aesthetic Scrollbar
    ========================================= */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-deep);
+  background: var(--bg-body);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--bg-surface);
-  border-radius: 5px;
+  background: #222;
+  border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -166,55 +174,58 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 /* =========================================
-   Responsive Media Queries
+   Responsive Scaling
    ========================================= */
 
-/* Tablets & Small Laptops */
+/* Desktop & Laptops */
+@media screen and (max-width: 1200px) {
+  .container {
+    max-width: 900px;
+  }
+}
+
+/* Tablets */
 @media screen and (max-width: 1024px) {
   section {
-    padding: 80px 5%;
-    min-height: auto; /* Allow sections to shrink if content is small */
+    padding: 100px 5%;
   }
   
   .section-title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 1.3rem;
   }
 }
 
 /* Mobile Devices */
 @media screen and (max-width: 768px) {
   section {
-    padding: 60px 5%;
+    padding: 80px 5%;
   }
 
   .section-title {
-    font-size: 2rem;
-    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 3.5rem;
   }
 
-  /* Buttons adjust to be easier to tap on mobile */
   .hero-btn, .submit-btn, .view-btn {
-    padding: 12px 24px;
-    font-size: 0.95rem;
+    padding: 12px 28px;
+    width: 100%; /* Full width buttons for mobile touch accuracy */
   }
-}
 
-/* Small Mobile / Portrait */
-@media screen and (max-width: 480px) {
-  .section-title {
-    font-size: 1.75rem;
-  }
-  
-  /* Make buttons full width on very small screens so they don't break side-by-side */
   .hero-btns {
-    display: flex;
     flex-direction: column;
     gap: 15px;
     width: 100%;
   }
+}
 
-  .hero-btn {
-    width: 100%;
+/* Portrait Small Mobile */
+@media screen and (max-width: 480px) {
+  section {
+    padding: 60px 5%;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
   }
 }

@@ -1,79 +1,124 @@
-.projects {
-  padding: 100px 5%;
-  background-color: #f4f4f4;
-}
+/* =========================================
+   PROJECTS SECTION - ARCHITECTURAL DARK
+   ========================================= */
 
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 50px;
-  color: #333;
+.projects {
+  padding: 120px 5%;
+  background: var(--bg-body); /* Matte Charcoal */
+  position: relative;
+  border-top: 1px solid var(--border);
 }
 
 .projects-grid {
   display: grid;
-  /* This line makes it responsive: 3 columns on desktop, 1 on mobile */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-  max-width: 1200px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
+/* Structural Card Design */
 .project-card {
-  background: #ffffff;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  padding: 25px;
+  background: var(--bg-card); /* Elevated Surface */
+  border: 1px solid var(--border);
+  border-radius: 4px; /* Professional sharp look */
+  padding: 40px;
+  transition: var(--transition);
   display: flex;
   flex-direction: column;
+  position: relative;
+  height: 100%;
 }
 
 .project-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
+  border-color: var(--accent); /* Emerald Mint highlight */
 }
 
-.project-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #222;
-}
-
-.project-card p {
-  color: #666;
-  line-height: 1.6;
+.project-title {
+  font-size: 1.4rem;
+  font-weight: 700;
   margin-bottom: 20px;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
 }
 
+.project-desc {
+  color: var(--text-dim);
+  line-height: 1.8;
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+  flex-grow: 1; /* Ensures buttons align at the bottom */
+}
+
+/* Minimalist Tech Stack Tags */
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 25px;
+  gap: 12px;
+  margin-bottom: 40px;
 }
 
 .tech-tag {
-  background: #61dafb22;
-  color: #0088cc;
-  padding: 5px 12px;
-  border-radius: 5px;
-  font-size: 0.85rem;
-  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--accent-soft);
+  padding-bottom: 2px;
+}
+
+/* Button Container */
+.card-footer {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
 }
 
 .view-btn {
+  flex: 1;
   text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  border: 2px solid #333;
-  padding: 10px 20px;
-  border-radius: 5px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 12px;
+  border-radius: 0px; /* Matching sharp aesthetic */
   text-align: center;
-  transition: 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: var(--transition);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+}
+
+.live-btn {
+  background: var(--accent);
+  color: #000; /* High contrast black on mint */
 }
 
 .view-btn:hover {
-  background: #333;
-  color: #fff;
+  background: var(--accent);
+  color: #000;
+  box-shadow: 0 5px 15px var(--accent-glow);
+}
+
+.live-btn:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .projects {
+    padding: 80px 5%;
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .project-card {
+    padding: 30px;
+  }
 }
