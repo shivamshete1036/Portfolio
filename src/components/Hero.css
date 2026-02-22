@@ -28,14 +28,13 @@
   width: 320px;
   height: 350px;
   object-fit: cover;
-  border-radius: 10px; /* Professional square-ish look */
-  filter: grayscale(0%); /* Elegant black and white by default */
+  border-radius: 0px; /* Professional square-ish look */
   border: 1px solid var(--border);
   transition: var(--transition);
 }
 
 .hero-image-wrapper .profile-photo:hover {
-  filter: grayscale(0%); /* Brings color back on interaction */
+
   border-color: var(--accent);
   transform: translateY(-5px);
 }
